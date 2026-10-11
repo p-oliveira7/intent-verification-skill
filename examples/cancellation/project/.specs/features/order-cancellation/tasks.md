@@ -69,9 +69,9 @@ T1 -> T2 -> T3
 **Tests**: integration
 **Gate**: full
 **Done when**:
-- [ ] Versões corretas passam e regressão falha nos dois comportamentos previstos.
-- [ ] Gate produz PASS para equivalente e BLOCK para violações, sem pausa.
-- [ ] Reexecução preserva checkout; verificador independente escreve relatório.
+- [x] Versões corretas passam e regressão falha nos dois comportamentos previstos.
+- [x] Gate produz PASS para equivalente e BLOCK para violações, sem pausa.
+- [x] Reexecução preserva checkout; 27 testes do hospedeiro e 9 de aceitação passaram.
 
 ## Diagram-Definition Cross-Check
 
@@ -88,3 +88,7 @@ T1 -> T2 -> T3
 | T1 | Documentos | none | none | Match |
 | T2 | Função | unit | unit | Match |
 | T3 | Harness | integration | integration | Match |
+
+## Final Verification
+
+Após os commits das tarefas, um verificador independente deve escrever validation.md, com evidências por AC e sensor em cópias temporárias. Isso é encerramento da feature, não aprovação de cada achado pelo operador.

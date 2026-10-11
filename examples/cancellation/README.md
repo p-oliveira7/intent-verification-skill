@@ -26,3 +26,27 @@ Prioridade P1 da história TLC significa MVP. Severidade P1 do Quality Gate sign
 | Regressão intencional | Exclui o sétimo dia e reduz reembolso para 80% | Duas falhas observáveis | BLOCK, continuidade permitida |
 
 As interpretações semânticas serão registradas pelo agente e o harness reproduzirá sua triagem. Esse replay não mede detecção autônoma ou taxa de falsos positivos de um modelo.
+
+## Executar e inspecionar evidências
+
+Da raiz do repositório hospedeiro:
+
+```bash
+python3 -m unittest discover -s examples/cancellation/project/tests -v
+python3 examples/cancellation/run_demo.py --out /tmp/intent-cancellation-comparison
+python3 -m unittest discover -s tests -v
+```
+
+O diretório de saída deve ser novo e fora do checkout. Cada caso produz `bundle.json`, `analysis.json`, `test-results.json`, `intent-result.json` e `implementation.py`; `summary.json` compara os três. Git temporário e subprocessos são descartados; o checkout original permanece intacto. O resultado de teste da regressão conserva duas falhas, não as transforma em testes aprovados.
+
+`analysis-reference.json` preserva interpretações semânticas feitas pelo agente. IDs de evidência e head são vinculados ao bundle durante a execução; não usar essa referência em uma mudança desconhecida. Os artefatos podem alimentar uma nova análise independente, sem consultar primeiro a resposta de referência.
+
+## Evidências esperadas
+
+| Caso | Passaram | Falharam | Decisão | Pausa |
+|---|---|---|---|---|
+| Correto | 9 | 0 | PASS | Não |
+| Refatoração equivalente | 9 | 0 | PASS; um candidato textual excluído | Não |
+| Regressão intencional | 7 | 2 | BLOCK; duas causas distintas | Não |
+
+Na regressão, o teste de sétimo dia demonstra rejeição indevida; o teste de dia zero demonstra valor abaixo de 100%. O reembolso também estaria errado no sétimo dia se a condição de prazo fosse corrigida isoladamente; não confundir o número de testes falhos com o número total de condições afetadas.

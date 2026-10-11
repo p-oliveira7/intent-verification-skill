@@ -51,6 +51,19 @@ flowchart TD
     I --> J["Relatório auditável e continuidade independente"]
 ```
 
+## Simulação com PRD, TDD e TLC Spec-Driven v3
+
+O [cenário de cancelamento](examples/cancellation/README.md) inclui PRD, TDD Markdown, specs em EARS no formato TLC 3.3.0, implementação correta, refatoração equivalente, regressão intencional e testes. O harness cria um Git temporário e entrega bundles/análises/resultados por caso:
+
+```bash
+python3 -m unittest discover -s examples/cancellation/project/tests -v
+python3 examples/cancellation/run_demo.py --out /tmp/intent-cancellation-comparison
+```
+
+Use um diretório de saída novo, fora deste checkout. Resultado previsto: correto e refatoração com nove testes aprovados e PASS; regressão com sete aprovados, duas falhas de negócio e BLOCK, mantendo continuidade. Testes do harness confirmam quais falhas ocorreram, sem confundir erro de runner com defeito detectado.
+
+As análises semânticas são referências preparadas pelo agente nesta sessão. O harness reproduz a triagem dessas análises; não faz novas chamadas de modelo nem comprova detecção semântica autônoma. Os artefatos gerados permitem uma nova execução manual da skill ou avaliação independente.
+
 ## Limites e avaliação
 
 Os testes verificam implementação e regras, não a qualidade de interpretação do modelo. Hashes detectam inconsistência interna, não garantem autenticidade do bundle. Estados como `supported` e `scope_complete` exigem julgamento fundamentado do agente. Leia o [contrato e a rubrica](docs/contract.md).
