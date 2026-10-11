@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "head_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "scope_complete": true,
+  "scope_reason": "Exemplo sintético: requisito e mudança integralmente considerados.",
+  "requirements": [
+    {
+      "id": "SPEC-AUTH-017",
+      "mandatory": true,
+      "status": "violated",
+      "evidence_refs": [
+        "DOC-001",
+        "DIFF-001"
+      ],
+      "reason": "A mudança remove a exigência de permissão, sem controle equivalente no exemplo."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "INTENT-001",
+      "category": "requirement_contradiction",
+      "impact": "high",
+      "confidence": "high",
+      "assessment": "supported",
+      "resolution": "open",
+      "requirement_refs": [
+        "SPEC-AUTH-017"
+      ],
+      "evidence_refs": [
+        "DOC-001",
+        "DIFF-001"
+      ],
+      "summary": "Exportação exige somente autenticação.",
+      "consequence": "Usuário autenticado sem permissão pode exportar relatórios.",
+      "reason": "O requisito exige permissão e o diff sintético remove esse controle.",
+      "root_cause_key": "export-guard",
+      "correction_key": "restore-permission-control",
+      "group_reason": "Remoção da mesma guarda de autorização."
+    }
+  ],
+  "execution_dependencies": []
+}

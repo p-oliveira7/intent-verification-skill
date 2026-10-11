@@ -1,0 +1,5 @@
+{
+  "version": "intent-v1",
+  "blocking_severities": ["P0", "P1"],
+  "mandatory_evidence_required": true
+}

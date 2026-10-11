@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "base_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "head_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "evidence": [
+    {
+      "id": "DIFF-001",
+      "kind": "change_diff",
+      "source": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa..bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "text": "- require_export_permission(user)\n+ require_authenticated(user)\n",
+      "sha256": "d1945736a617fbdcf569ad45b2020f139805398d1a583c280b66b0599a0b8823"
+    },
+    {
+      "id": "DOC-001",
+      "kind": "requirement_document",
+      "source": "docs/spec.md",
+      "text": "SPEC-AUTH-017: Exportar relatórios exige permissão de exportação.\n",
+      "sha256": "659bca603a534401e7c2b3d84829f0ad1dabf4e39e47d42ba2cdff91a3fbcd3f"
+    }
+  ]
+}
