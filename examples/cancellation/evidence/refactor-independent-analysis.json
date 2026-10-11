@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "head_commit": "03bcff3dc355e582ed5e7a8876160dddf4c922e7",
+  "scope_complete": true,
+  "scope_reason": "Independent six-rule source and documentary review of this synthetic pure function.",
+  "requirements": [
+    {
+      "id": "CANCEL-01",
+      "mandatory": true,
+      "status": "satisfied",
+      "evidence_refs": [
+        "DIFF-001",
+        "DOC-001",
+        "DOC-002",
+        "DOC-003"
+      ],
+      "reason": "Independent source inspection and exact acceptance observations against PRD/TDD/spec."
+    },
+    {
+      "id": "CANCEL-02",
+      "mandatory": true,
+      "status": "satisfied",
+      "evidence_refs": [
+        "DIFF-001",
+        "DOC-001",
+        "DOC-002",
+        "DOC-003"
+      ],
+      "reason": "Independent source inspection and exact acceptance observations against PRD/TDD/spec."
+    },
+    {
+      "id": "CANCEL-03",
+      "mandatory": true,
+      "status": "satisfied",
+      "evidence_refs": [
+        "DIFF-001",
+        "DOC-001",
+        "DOC-002",
+        "DOC-003"
+      ],
+      "reason": "Independent source inspection and exact acceptance observations against PRD/TDD/spec."
+    },
+    {
+      "id": "CANCEL-04",
+      "mandatory": true,
+      "status": "satisfied",
+      "evidence_refs": [
+        "DIFF-001",
+        "DOC-001",
+        "DOC-002",
+        "DOC-003"
+      ],
+      "reason": "Independent source inspection and exact acceptance observations against PRD/TDD/spec."
+    },
+    {
+      "id": "CANCEL-05",
+      "mandatory": true,
+      "status": "satisfied",
+      "evidence_refs": [
+        "DIFF-001",
+        "DOC-001",
+        "DOC-002",
+        "DOC-003"
+      ],
+      "reason": "Independent source inspection and exact acceptance observations against PRD/TDD/spec."
+    },
+    {
+      "id": "CANCEL-06",
+      "mandatory": true,
+      "status": "satisfied",
+      "evidence_refs": [
+        "DIFF-001",
+        "DOC-001",
+        "DOC-002",
+        "DOC-003"
+      ],
+      "reason": "Independent source inspection and exact acceptance observations against PRD/TDD/spec."
+    }
+  ],
+  "candidates": [],
+  "execution_dependencies": []
+}

@@ -1,0 +1,16 @@
+{
+  "count": 9,
+  "errors": [],
+  "exit_code": 1,
+  "failures": [
+    {
+      "detail": "Traceback (most recent call last):\n  File \"/tmp/intent-cancellation-git-m6ull9j0/tests/test_cancellation.py\", line 23, in test_cancel_day_seven_full_refund\n    self.assertEqual(cancel_order(Order(\"pending\", 7, 12345)), Cancellation(\"cancelled\", 12345, None))\nAssertionError: Cancellation(status='rejected', refund_cents=0, error='window_expired') != Cancellation(status='cancelled', refund_cents=12345, error=None)\n",
+      "test": "test_cancellation.CancellationAcceptanceTests.test_cancel_day_seven_full_refund"
+    },
+    {
+      "detail": "Traceback (most recent call last):\n  File \"/tmp/intent-cancellation-git-m6ull9j0/tests/test_cancellation.py\", line 19, in test_cancel_day_zero_full_refund\n    self.assertEqual(cancel_order(Order(\"pending\", 0, 12345)), Cancellation(\"cancelled\", 12345, None))\nAssertionError: Cancellation(status='cancelled', refund_cents=9876, error=None) != Cancellation(status='cancelled', refund_cents=12345, error=None)\n",
+      "test": "test_cancellation.CancellationAcceptanceTests.test_cancel_day_zero_full_refund"
+    }
+  ],
+  "skipped": []
+}

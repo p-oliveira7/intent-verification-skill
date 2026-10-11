@@ -1,0 +1,43 @@
+{
+  "cases": [
+    {
+      "can_continue": true,
+      "case": "correct",
+      "decision": "PASS",
+      "excluded": 0,
+      "failed": 0,
+      "finding_groups": 0,
+      "head_commit": "a6296a39cc7c04f51b6d8d65f75e2d57d1d990be",
+      "passed": 9,
+      "runner_errors": 0,
+      "tests": 9
+    },
+    {
+      "can_continue": true,
+      "case": "refactor",
+      "decision": "PASS",
+      "excluded": 1,
+      "failed": 0,
+      "finding_groups": 0,
+      "head_commit": "03bcff3dc355e582ed5e7a8876160dddf4c922e7",
+      "passed": 9,
+      "runner_errors": 0,
+      "tests": 9
+    },
+    {
+      "can_continue": true,
+      "case": "regression",
+      "decision": "BLOCK",
+      "excluded": 0,
+      "failed": 2,
+      "finding_groups": 2,
+      "head_commit": "44cc2c179d13b0463b66ab69ef929a990aa4ff46",
+      "passed": 7,
+      "runner_errors": 0,
+      "tests": 9
+    }
+  ],
+  "mode": "recorded-semantic-analysis-replay",
+  "source_checkout_preserved": true,
+  "version": 1
+}

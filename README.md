@@ -79,3 +79,5 @@ Os testes verificam implementação e regras, não a qualidade de interpretaçã
 Antes de adoção corporativa, avaliar mudanças representativas com resultados de referência: contradições reais, diferenças apenas textuais, controles compensatórios, omissões, documentos conflitantes e hipóteses críticas inconclusivas. Medir falsos positivos, violações omitidas, perguntas e variação entre execuções semânticas. Não alegar redução de ruído ou detecção de defeitos reais apenas por testes unitários passando.
 
 Uma revisão normal não altera código nem cria testes na aplicação avaliada. Waivers e aceites formais ficam fora da v1; não permitir descarte informal de P0/P1.
+
+As [evidências completas da simulação](examples/cancellation/evidence/README.md) estão versionadas com um roteiro de leitura, resultados brutos e análises independentes.

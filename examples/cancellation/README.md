@@ -52,3 +52,7 @@ Veja a [comparação observada com mudanças de código e valores concretos](RES
 | Regressão intencional | 7 | 2 | BLOCK; duas causas distintas | Não |
 
 Na regressão, o teste de sétimo dia demonstra rejeição indevida; o teste de dia zero demonstra valor abaixo de 100%. O reembolso também estaria errado no sétimo dia se a condição de prazo fosse corrigida isoladamente; não confundir o número de testes falhos com o número total de condições afetadas.
+
+## Leitura detalhada da execução
+
+As [evidências versionadas e o roteiro de leitura](evidence/README.md) incluem código executado, bundles, análises, falhas observadas, decisões do motor e avaliação independente dos três casos, além dos resultados das sete mutações.
