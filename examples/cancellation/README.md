@@ -43,6 +43,8 @@ O diretório de saída deve ser novo e fora do checkout. Cada caso produz `bundl
 
 ## Evidências esperadas
 
+Veja a [comparação observada com mudanças de código e valores concretos](RESULTS.md).
+
 | Caso | Passaram | Falharam | Decisão | Pausa |
 |---|---|---|---|---|
 | Correto | 9 | 0 | PASS | Não |

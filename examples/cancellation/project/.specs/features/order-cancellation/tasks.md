@@ -5,7 +5,7 @@
 Usar artefatos e gates do TLC Spec-Driven 3.3.0 como referência para esta simulação autorizada. Fonte e adaptação registradas no README do cenário. Não tratar o código de regressão como uma implementação aprovada de negócio.
 
 **Design**: design.md
-**Status**: In Progress
+**Status**: Done
 
 ## Test Coverage Matrix
 

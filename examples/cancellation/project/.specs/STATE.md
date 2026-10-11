@@ -9,4 +9,4 @@
 
 ## Handoff
 
-Feature: order-cancellation. Plano: documentação, implementação com testes, harness de comparação. Nenhuma informação humana adicional é indispensável ao cenário sintético.
+Feature: order-cancellation. Documentação, implementação e harness concluídos em commits separados. Verificação independente: seis requisitos confirmados, 27 testes do hospedeiro e nove de aceitação aprovados, sete mutações detectadas. Regressão proposital preserva duas falhas. Próximo passo: avaliar nova mudança sem consultar a análise de referência. Branch: feat/synthetic-intent-scenario.
