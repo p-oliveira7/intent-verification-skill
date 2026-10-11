@@ -51,6 +51,27 @@ flowchart TD
     I --> J["Relatório auditável e continuidade independente"]
 ```
 
+## Simulação com PRD, TDD e TLC Spec-Driven v3
+
+O [cenário de cancelamento](examples/cancellation/README.md) inclui PRD, TDD Markdown, specs em EARS no formato TLC 3.3.0, implementação correta, refatoração equivalente, regressão intencional e testes. O harness cria um Git temporário e entrega bundles/análises/resultados por caso:
+
+```bash
+python3 -m unittest discover -s examples/cancellation/project/tests -v
+python3 examples/cancellation/run_demo.py --out /tmp/intent-cancellation-comparison
+```
+
+Use um diretório de saída novo, fora deste checkout. A execução local observou:
+
+| Versão | Testes passaram | Testes falharam | Intent | Continuidade |
+|---|---|---|---|---|
+| Correta | 9 | 0 | PASS | Permitida |
+| Refatoração equivalente | 9 | 0 | PASS | Permitida |
+| Regressão intencional | 7 | 2 | BLOCK | Permitida |
+
+Veja a [comparação visual, mudanças de código e valores concretos](examples/cancellation/RESULTS.md). Testes do harness confirmam quais falhas ocorreram, sem confundir erro de runner com defeito detectado. As duas falhas da regressão permanecem explicitamente registradas.
+
+As análises semânticas são referências preparadas pelo agente nesta sessão. O harness reproduz a triagem dessas análises; não faz novas chamadas de modelo nem comprova detecção semântica autônoma. Os artefatos gerados permitem uma nova execução manual da skill ou avaliação independente.
+
 ## Limites e avaliação
 
 Os testes verificam implementação e regras, não a qualidade de interpretação do modelo. Hashes detectam inconsistência interna, não garantem autenticidade do bundle. Estados como `supported` e `scope_complete` exigem julgamento fundamentado do agente. Leia o [contrato e a rubrica](docs/contract.md).
@@ -58,3 +79,5 @@ Os testes verificam implementação e regras, não a qualidade de interpretaçã
 Antes de adoção corporativa, avaliar mudanças representativas com resultados de referência: contradições reais, diferenças apenas textuais, controles compensatórios, omissões, documentos conflitantes e hipóteses críticas inconclusivas. Medir falsos positivos, violações omitidas, perguntas e variação entre execuções semânticas. Não alegar redução de ruído ou detecção de defeitos reais apenas por testes unitários passando.
 
 Uma revisão normal não altera código nem cria testes na aplicação avaliada. Waivers e aceites formais ficam fora da v1; não permitir descarte informal de P0/P1.
+
+As [evidências completas da simulação](examples/cancellation/evidence/README.md) estão versionadas com um roteiro de leitura, resultados brutos e análises independentes.

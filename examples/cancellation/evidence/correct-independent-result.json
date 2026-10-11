@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "decision": "PASS",
+  "policy_version": "intent-v1",
+  "input_fingerprint": "3dccf8966ce26005b453afa892a4823ba6cbb7d53f5c609a8c61369a4b15f846",
+  "head_commit": "a6296a39cc7c04f51b6d8d65f75e2d57d1d990be",
+  "can_continue": true,
+  "execution_dependencies": [],
+  "blockers": [],
+  "reviews": [],
+  "warnings": [],
+  "exclusions": [],
+  "groups": [],
+  "obligations": [
+    {
+      "id": "CANCEL-01",
+      "mandatory": true,
+      "status": "satisfied",
+      "evidence_refs": [
+        "DIFF-001",
+        "DOC-001",
+        "DOC-002",
+        "DOC-003"
+      ],
+      "reason": "Independent source inspection and exact acceptance observations against PRD/TDD/spec."
+    },
+    {
+      "id": "CANCEL-02",
+      "mandatory": true,
+      "status": "satisfied",
+      "evidence_refs": [
+        "DIFF-001",
+        "DOC-001",
+        "DOC-002",
+        "DOC-003"
+      ],
+      "reason": "Independent source inspection and exact acceptance observations against PRD/TDD/spec."
+    },
+    {
+      "id": "CANCEL-03",
+      "mandatory": true,
+      "status": "satisfied",
+      "evidence_refs": [
+        "DIFF-001",
+        "DOC-001",
+        "DOC-002",
+        "DOC-003"
+      ],
+      "reason": "Independent source inspection and exact acceptance observations against PRD/TDD/spec."
+    },
+    {
+      "id": "CANCEL-04",
+      "mandatory": true,
+      "status": "satisfied",
+      "evidence_refs": [
+        "DIFF-001",
+        "DOC-001",
+        "DOC-002",
+        "DOC-003"
+      ],
+      "reason": "Independent source inspection and exact acceptance observations against PRD/TDD/spec."
+    },
+    {
+      "id": "CANCEL-05",
+      "mandatory": true,
+      "status": "satisfied",
+      "evidence_refs": [
+        "DIFF-001",
+        "DOC-001",
+        "DOC-002",
+        "DOC-003"
+      ],
+      "reason": "Independent source inspection and exact acceptance observations against PRD/TDD/spec."
+    },
+    {
+      "id": "CANCEL-06",
+      "mandatory": true,
+      "status": "satisfied",
+      "evidence_refs": [
+        "DIFF-001",
+        "DOC-001",
+        "DOC-002",
+        "DOC-003"
+      ],
+      "reason": "Independent source inspection and exact acceptance observations against PRD/TDD/spec."
+    }
+  ],
+  "scope_complete": true,
+  "scope_reason": "Independent six-rule source and documentary review of this synthetic pure function."
+}

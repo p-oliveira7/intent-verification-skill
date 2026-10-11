@@ -1,0 +1,65 @@
+{
+  "provenance": "Interpretações de referência preparadas pelo agente a partir de PRD, TDD, spec e código desta simulação. Replay não é nova inferência semântica.",
+  "requirements": ["CANCEL-01", "CANCEL-02", "CANCEL-03", "CANCEL-04", "CANCEL-05", "CANCEL-06"],
+  "cases": {
+    "correct": {
+      "violated": [],
+      "candidates": []
+    },
+    "refactor": {
+      "violated": [],
+      "candidates": [
+        {
+          "id": "INTENT-TEXT-001",
+          "category": "behavior_change",
+          "impact": "low",
+          "confidence": "high",
+          "assessment": "text_only",
+          "resolution": "open",
+          "requirement_refs": ["CANCEL-01"],
+          "summary": "Variável local passa de order para purchase.",
+          "consequence": "",
+          "reason": "A assinatura pública permanece igual e a variável local referencia o mesmo Order; todos os retornos e condições preservam o comportamento.",
+          "root_cause_key": "",
+          "correction_key": "",
+          "group_reason": ""
+        }
+      ]
+    },
+    "regression": {
+      "violated": ["CANCEL-01", "CANCEL-02"],
+      "candidates": [
+        {
+          "id": "INTENT-BOUNDARY-001",
+          "category": "requirement_contradiction",
+          "impact": "high",
+          "confidence": "high",
+          "assessment": "supported",
+          "resolution": "open",
+          "requirement_refs": ["CANCEL-01"],
+          "summary": "O sétimo dia passou a ser rejeitado.",
+          "consequence": "Pedidos elegíveis no último dia perdem o cancelamento permitido pelo produto.",
+          "reason": "PRD/spec definem 7 dias inclusive; a condição >= 7 rejeita esse dia e o teste de fronteira falha.",
+          "root_cause_key": "window-boundary",
+          "correction_key": "restore-inclusive-window",
+          "group_reason": "Mudança do operador da mesma condição de prazo."
+        },
+        {
+          "id": "INTENT-REFUND-001",
+          "category": "requirement_contradiction",
+          "impact": "moderate",
+          "confidence": "high",
+          "assessment": "supported",
+          "resolution": "open",
+          "requirement_refs": ["CANCEL-02"],
+          "summary": "O reembolso foi reduzido para 80%.",
+          "consequence": "Cliente recebe menos que o total obrigatório, mesmo num cancelamento permitido.",
+          "reason": "PRD/spec exigem total integral; a expressão total_cents * 80 // 100 reduz o valor e o teste de dia zero falha.",
+          "root_cause_key": "refund-percentage",
+          "correction_key": "restore-full-refund",
+          "group_reason": "Mudança na expressão que determina o valor de reembolso."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "blockers": [],
+  "can_continue": true,
+  "decision": "PASS",
+  "exclusions": [],
+  "execution_dependencies": [],
+  "groups": [],
+  "head_commit": "a6296a39cc7c04f51b6d8d65f75e2d57d1d990be",
+  "input_fingerprint": "e0f984674335908d354591be71ad9a30f31ef4e907c05497fd6855c6e62c3115",
+  "obligations": [
+    {
+      "evidence_refs": [
+        "DIFF-001",
+        "DOC-001",
+        "DOC-002",
+        "DOC-003"
+      ],
+      "id": "CANCEL-01",
+      "mandatory": true,
+      "reason": "Interpretação registrada: a implementação mantém este requisito; código completo foi inspecionado e os casos correspondentes foram executados.",
+      "status": "satisfied"
+    },
+    {
+      "evidence_refs": [
+        "DIFF-001",
+        "DOC-001",
+        "DOC-002",
+        "DOC-003"
+      ],
+      "id": "CANCEL-02",
+      "mandatory": true,
+      "reason": "Interpretação registrada: a implementação mantém este requisito; código completo foi inspecionado e os casos correspondentes foram executados.",
+      "status": "satisfied"
+    },
+    {
+      "evidence_refs": [
+        "DIFF-001",
+        "DOC-001",
+        "DOC-002",
+        "DOC-003"
+      ],
+      "id": "CANCEL-03",
+      "mandatory": true,
+      "reason": "Interpretação registrada: a implementação mantém este requisito; código completo foi inspecionado e os casos correspondentes foram executados.",
+      "status": "satisfied"
+    },
+    {
+      "evidence_refs": [
+        "DIFF-001",
+        "DOC-001",
+        "DOC-002",
+        "DOC-003"
+      ],
+      "id": "CANCEL-04",
+      "mandatory": true,
+      "reason": "Interpretação registrada: a implementação mantém este requisito; código completo foi inspecionado e os casos correspondentes foram executados.",
+      "status": "satisfied"
+    },
+    {
+      "evidence_refs": [
+        "DIFF-001",
+        "DOC-001",
+        "DOC-002",
+        "DOC-003"
+      ],
+      "id": "CANCEL-05",
+      "mandatory": true,
+      "reason": "Interpretação registrada: a implementação mantém este requisito; código completo foi inspecionado e os casos correspondentes foram executados.",
+      "status": "satisfied"
+    },
+    {
+      "evidence_refs": [
+        "DIFF-001",
+        "DOC-001",
+        "DOC-002",
+        "DOC-003"
+      ],
+      "id": "CANCEL-06",
+      "mandatory": true,
+      "reason": "Interpretação registrada: a implementação mantém este requisito; código completo foi inspecionado e os casos correspondentes foram executados.",
+      "status": "satisfied"
+    }
+  ],
+  "policy_version": "intent-v1",
+  "reviews": [],
+  "scope_complete": true,
+  "scope_reason": "Escopo sintético: seis requisitos de cancelamento, documentos e código completos analisados pelo agente; este arquivo reproduz a interpretação registrada, não nova inferência.",
+  "version": 1,
+  "warnings": []
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "mutation": "inclusive boundary",
+    "line": 29,
+    "killed": true,
+    "failed_tests": [
+      "FAIL: test_cancel_day_seven_full_refund"
+    ]
+  },
+  {
+    "mutation": "refund amount",
+    "line": 31,
+    "killed": true,
+    "failed_tests": [
+      "FAIL: test_cancel_day_seven_full_refund",
+      "FAIL: test_cancel_day_zero_full_refund"
+    ]
+  },
+  {
+    "mutation": "expired reason",
+    "line": 30,
+    "killed": true,
+    "failed_tests": [
+      "FAIL: test_day_eight_is_expired"
+    ]
+  },
+  {
+    "mutation": "shipped refund",
+    "line": 28,
+    "killed": true,
+    "failed_tests": [
+      "FAIL: test_shipped_is_rejected_without_refund"
+    ]
+  },
+  {
+    "mutation": "idempotent refund",
+    "line": 26,
+    "killed": true,
+    "failed_tests": [
+      "FAIL: test_cancelled_after_window_is_still_idempotent",
+      "FAIL: test_cancelled_has_no_additional_refund"
+    ]
+  },
+  {
+    "mutation": "boolean age",
+    "line": 22,
+    "killed": true,
+    "failed_tests": [
+      "FAIL: test_invalid_age_is_rejected"
+    ]
+  },
+  {
+    "mutation": "validation message",
+    "line": 24,
+    "killed": true,
+    "failed_tests": [
+      "FAIL: test_invalid_age_is_rejected",
+      "FAIL: test_invalid_age_is_rejected",
+      "FAIL: test_invalid_age_is_rejected",
+      "FAIL: test_invalid_age_is_rejected",
+      "FAIL: test_invalid_total_is_rejected",
+      "FAIL: test_invalid_total_is_rejected",
+      "FAIL: test_invalid_total_is_rejected",
+      "FAIL: test_invalid_total_is_rejected",
+      "FAIL: test_invalid_total_is_rejected",
+      "FAIL: test_unknown_state_is_rejected",
+      "FAIL: test_unknown_state_is_rejected",
+      "FAIL: test_unknown_state_is_rejected",
+      "FAIL: test_unknown_state_is_rejected"
+    ]
+  }
+]
