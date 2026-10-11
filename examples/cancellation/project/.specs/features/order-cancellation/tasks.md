@@ -57,7 +57,7 @@ T1 -> T2 -> T3
 **Tests**: unit
 **Gate**: quick
 **Done when**:
-- [ ] Testes verificam valores exatos e todos os casos de borda passam.
+- [x] Nove testes verificam valores exatos e todos os casos de borda passam.
 
 ### T3: Comparar variantes e alimentar a skill
 

@@ -70,12 +70,12 @@ Validação: CANCEL-06. Repetição/estado: CANCEL-04 e CANCEL-05. Falha: motivo
 
 | Requirement ID | Story | Phase | Status |
 |---|---|---|---|
-| CANCEL-01 | P1 cancelamento | Execute | Pending |
-| CANCEL-02 | P1 cancelamento | Execute | Pending |
-| CANCEL-03 | P1 cancelamento | Execute | Pending |
-| CANCEL-04 | P1 estados | Execute | Pending |
-| CANCEL-05 | P1 estados | Execute | Pending |
-| CANCEL-06 | P1 validação | Execute | Pending |
+| CANCEL-01 | P1 cancelamento | Execute | Implementing |
+| CANCEL-02 | P1 cancelamento | Execute | Implementing |
+| CANCEL-03 | P1 cancelamento | Execute | Implementing |
+| CANCEL-04 | P1 estados | Execute | Implementing |
+| CANCEL-05 | P1 estados | Execute | Implementing |
+| CANCEL-06 | P1 validação | Execute | Implementing |
 
 Coverage: 6 total, 6 mapped to implementation and harness tasks, 0 unmapped.
 
